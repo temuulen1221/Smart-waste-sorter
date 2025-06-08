@@ -41,11 +41,12 @@ Classifies waste items in a photo or webcam feed as recyclable (e.g., plastic, p
 
 ## Demo
 
-![Classified Output]
-(demo/classified_output_3.jpg)
-(demo/classified_output_2.jpg)
-(demo/classified_output_1.jpg)
-(demo/test.jpg)
+<div style="display: flex; gap: 15px;">
+    <img src="demo/classified_output_1.jpg" alt="Classified Image 1" width="220" height="220">
+    <img src="demo/classified_output_2.jpg" alt="Classified Image 2" width="220" height="220">
+    <img src="demo/classified_output_3.jpg" alt="Classified Image 3" width="220" height="220">
+    <img src="demo/test.jpg" alt="Test Image" width="220" height="220">
+</div>
 - YOLOv5: Ultralytics
 - OpenCV: Docs
 - Flask: Docs
@@ -56,4 +57,4 @@ MIT License (see LICENSE).
 
 ## Contributions
 
-Developed by \[Temuulen\] (see Git commits).
+Developed by \[Temuulen(21102460)\]
