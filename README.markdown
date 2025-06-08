@@ -41,7 +41,7 @@ Classifies waste items in a photo or webcam feed as recyclable (e.g., plastic, p
 
 ## Demo
 
-![Classified Output](demo/output.jpg)## References
+![Classified Output](demo/output.jpg)
 
 - YOLOv5: Ultralytics
 - OpenCV: Docs
