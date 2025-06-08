@@ -62,4 +62,4 @@ MIT License (see LICENSE).
 
 ## Contributions
 
-Developed by \[Temuulen(21102460)\]
+[Temuulen(21102460)\]
