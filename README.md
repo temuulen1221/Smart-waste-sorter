@@ -47,6 +47,8 @@ Classifies waste items in a photo or webcam feed as recyclable (e.g., plastic, p
     <img src="demo/classified_output_3.jpg" alt="Classified Image 3" width="220" height="220">
     <img src="demo/test.jpg" alt="Test Image" width="220" height="220">
 </div>
+
+## Reference
 - YOLOv5: Ultralytics
 - OpenCV: Docs
 - Flask: Docs
