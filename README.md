@@ -1,4 +1,7 @@
-Smart Waste Sorter
+<div style="display: flex; align-items: center; gap: 10px; justify-content: space-between;">
+   <h1>Smart Waste Sorter</h1>
+    <img src="Banner.jpg" alt="Smart Waste Sorter Banner" width="150">
+</div>
 
 ## Overview
 
