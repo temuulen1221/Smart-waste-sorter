@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Waste Sorter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f7;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem 1rem 1rem;
+            font-weight: 700;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            color: #2c2c2c;
+            user-select: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header .logo {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #555;
+            font-weight: 900;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            max-width: 480px;
+            margin: 1.5rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(60, 60, 60, 0.1);
+        }
+
+        h2 {
+            margin-top: 1.5rem;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: center;
+            color: #444;
+        }
+
+        form {
+            margin-top: 1rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            max-width: 360px;
+            font-size: 1rem;
+            cursor: pointer;
+            background: #fafafa;
+            color: #555;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="file"]:focus,
+        input[type="file"]:hover {
+            border-color: #999;
+            outline: none;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            cursor: pointer;
+            background: #e0e0e0;
+            border: none;
+            padding: 8px 15px;
+            color: #444;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="file"]::-webkit-file-upload-button:hover {
+            background: #d1d1d1;
+        }
+
+        input[type="submit"] {
+            margin-top: 1.2rem;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 30px;
+            background: #555;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            user-select: none;
+        }
+
+        input[type="submit"]:hover {
+            background: #444;
+            transform: translateY(-2px);
+        }
+
+        a.button-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1rem;
+            padding: 0.75rem 2.2rem;
+            background: #555;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        a.button-link:hover {
+            background: #444;
+            transform: translateY(-2px);
+        }
+
+        /* Camera icon style */
+        svg.camera-icon {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        footer {
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            user-select: none;
+            border-top: 1px solid #ddd;
+            margin-top: auto;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 1rem 1rem;
+                max-width: 100%;
+                border-radius: 10px;
+                margin: 1rem;
+            }
+            header {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            input[type="submit"], a.button-link {
+                width: 100%;
+                text-align: center;
+            }
+            input[type="file"] {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">♻️</div>
+        Smart Waste Sorter
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Image</h2>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required />
+                <input type="submit" value="Classify" />
+            </form>
+        </section>
+
+        <section class="webcam-section">
+            <h2>Real-Time Webcam</h2>
+            <a href="/webcam" class="button-link" role="button" aria-label="Start Webcam Detection">
+                <svg class="camera-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M20 5h-3.172l-1.414-1.414A1 1 0 0014.172 3H9.828a1 1 0 00-.707.293L7.707 5H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2zm-8 11a4 4 0 110-8 4 4 0 010 8z"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+                Start Webcam Detection
+            </a>
+        </section>
+    </main>
+</body>
+</html>
+
